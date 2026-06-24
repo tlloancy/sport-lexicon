@@ -1,29 +1,33 @@
 {
   "lexicon": 1,
   "id": "app.sport.tranche",
+  "movementThresholds": {
+    "snatch": {
+      "T1": [0, 30],
+      "T2": [31, 50],
+      "T3": [51, 70],
+      "T4": [71, 90],
+      "T5": [91, 999]
+    },
+    "deadlift": {
+      "T1": [0, 60],
+      "T2": [61, 100],
+      "T3": [101, 140],
+      "T4": [141, 180],
+      "T5": [181, 999]
+    }
+  },
   "defs": {
     "main": {
       "type": "object",
-      "required": ["movement", "thresholds"],
+      "description": "Tranche assignment for a performance (kg bands per movement).",
+      "required": ["movement", "value", "unit", "tranche"],
       "properties": {
         "movement": { "type": "string" },
-        "thresholds": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["id", "min", "max"],
-            "properties": {
-              "id": { "type": "string" },
-              "min": { "type": "number" },
-              "max": { "type": "number" }
-            }
-          }
-        }
+        "value": { "type": "number" },
+        "unit": { "type": "string", "enum": ["kg", "s", "m", "reps"] },
+        "tranche": { "type": "string" }
       }
-    },
-    "snatch": {
-      "type": "ref",
-      "ref": "#main"
     }
   }
 }
