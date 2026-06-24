@@ -1,0 +1,17 @@
+{
+  "lexicon": 1,
+  "id": "app.sport.peer",
+  "defs": {
+    "main": {
+      "type": "record",
+      "record": {
+        "type": "object",
+        "required": ["peerId", "createdAt"],
+        "properties": {
+          "peerId": { "type": "string" },
+          "createdAt": { "type": "string", "format": "datetime" }
+        }
+      }
+    }
+  }
+}
