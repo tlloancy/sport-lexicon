@@ -1,0 +1,22 @@
+{
+  "lexicon": 1,
+  "id": "app.sport.performance",
+  "defs": {
+    "main": {
+      "type": "record",
+      "record": {
+        "type": "object",
+        "required": ["movement", "value", "unit", "videoHash", "createdAt"],
+        "properties": {
+          "movement": { "type": "string" },
+          "value": { "type": "number" },
+          "unit": { "type": "string", "enum": ["kg", "s", "m", "reps"] },
+          "videoHash": { "type": "string" },
+          "chunkManifest": { "type": "string" },
+          "tranche": { "type": "string" },
+          "createdAt": { "type": "string", "format": "datetime" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "lexicon": 1,
+  "id": "app.sport.movement",
+  "defs": {
+    "main": {
+      "type": "record",
+      "record": {
+        "type": "object",
+        "required": ["name", "unit"],
+        "properties": {
+          "name": { "type": "string" },
+          "unit": { "type": "string", "enum": ["kg", "s", "m", "reps"] },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}

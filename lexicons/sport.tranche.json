@@ -1,0 +1,29 @@
+{
+  "lexicon": 1,
+  "id": "app.sport.tranche",
+  "defs": {
+    "main": {
+      "type": "object",
+      "required": ["movement", "thresholds"],
+      "properties": {
+        "movement": { "type": "string" },
+        "thresholds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "min", "max"],
+            "properties": {
+              "id": { "type": "string" },
+              "min": { "type": "number" },
+              "max": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "snatch": {
+      "type": "ref",
+      "ref": "#main"
+    }
+  }
+}

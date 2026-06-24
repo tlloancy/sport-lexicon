@@ -1,0 +1,15 @@
+{
+  "name": "sport-lexicon",
+  "version": "0.1.0",
+  "description": "AT Protocol lexicons for sport performance records",
+  "type": "module",
+  "main": "generated/index.js",
+  "types": "generated/index.d.ts",
+  "scripts": {
+    "generate": "bash generate.sh"
+  },
+  "dependencies": {
+    "@atproto/lexicon": "^0.4.14"
+  },
+  "license": "MIT"
+}
