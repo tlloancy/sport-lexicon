@@ -6,14 +6,22 @@
       "type": "record",
       "record": {
         "type": "object",
-        "required": ["movement", "value", "unit", "videoHash", "createdAt"],
+        "required": ["family", "discipline", "movement", "metricType", "videoHash", "createdAt"],
         "properties": {
+          "family": { "type": "string" },
+          "discipline": { "type": "string" },
           "movement": { "type": "string" },
+          "metricType": {
+            "type": "string",
+            "enum": ["weight", "time", "distance", "score", "none"]
+          },
           "value": { "type": "number" },
-          "unit": { "type": "string", "enum": ["kg", "s", "m", "reps"] },
+          "unit": {
+            "type": "string",
+            "enum": ["kg", "lb", "s", "m", "km", "pts"]
+          },
           "videoHash": { "type": "string" },
           "chunkManifest": { "type": "string" },
-          "tranche": { "type": "string" },
           "createdAt": { "type": "string", "format": "datetime" }
         }
       }
